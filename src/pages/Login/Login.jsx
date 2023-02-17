@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { login } from "../../services/api";
 import { LoginStyles } from "./LoginStyles";
 
 const Login = () => {
@@ -13,39 +14,45 @@ const Login = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-    try {
-      e.preventDefault();
-      setLoading(true);
+  useEffect(() => {
+    if (formData.password) {
       const errors = {};
-      if (!formData.email) {
-        errors.email = "Email is required";
+      if (formData.password.length < 6) {
+        errors.password = "Password must be at least 6 characters";
       }
-      if (!formData.password) {
-        errors.password = "Password is required";
-      }
-      if (Object.keys(errors).length > 0) {
-        setErrors(errors);
-        setLoading(false);
-        return;
-      }
-
-      fetch("http://localhost:3001/api/v1/users/login", {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
-        .then((response) => response.json())
-        .then((json) => {
-          setLoading(false);
-        });
-    } catch (error) {
-      console.log(error);
-      setLoading(false);
+      setErrors((prev) => ({ ...prev, ...errors }));
     }
+  }, [formData.password]);
+
+  useEffect(() => {
+    if (formData.email) {
+      const errors = {};
+      if (!formData.email.includes("@")) {
+        errors.email = "Email is invalid";
+      }
+      setErrors((prev) => ({ ...prev, ...errors }));
+    }
+  }, [formData.email]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const errors = {};
+    if (!formData.email) {
+      errors.email = "Email is required";
+    }
+    if (!formData.password) {
+      errors.password = "Password is required";
+    }
+    if (Object.keys(errors).length > 0) {
+      setErrors(errors);
+      setLoading(false);
+      return;
+    }
+    login(formData, setLoading);
   };
+
   return (
     <LoginStyles>
       <div className="left-section"></div>
@@ -61,6 +68,7 @@ const Login = () => {
             placeholder="Email Address *"
             className="input email-input"
           />
+          {errors.email && <p className="error">{errors.email}</p>}
           <div className="password-input-container">
             <input
               onChange={handleChange}
@@ -78,6 +86,7 @@ const Login = () => {
               <img src="/images/view_password_icon.png" alt="" />
             </div>
           </div>
+          {errors.password && <p className="error">{errors.password}</p>}
           <div className="checkbox-container">
             <input type="checkbox" />
             <p>Keep me signed in</p>

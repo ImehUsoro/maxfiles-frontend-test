@@ -39,6 +39,7 @@ export const LoginStyles = styled.div`
     color: #757575;
     font-size: 1.125rem;
     margin-bottom: 3.125rem;
+    text-align: center;
   }
 
   form {
@@ -49,14 +50,19 @@ export const LoginStyles = styled.div`
 
   .input {
     font-size: 1.125rem;
-    /* padding: 0.875rem 1.25rem 0.875rem 2.5rem; */
+  }
+
+  .error {
+    color: red;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
   }
 
   .password-input-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.875rem;
+    /* margin-bottom: 1.875rem; */
     margin-top: 1.25rem;
     background-color: #f1ebe2;
     border-radius: 0.625rem;
@@ -65,7 +71,6 @@ export const LoginStyles = styled.div`
   }
 
   .email-input {
-    /* border: 1px solid #e5c89e; */
     border: 1px solid #d1943966;
     border-radius: 0.625rem;
     color: black;
@@ -76,7 +81,6 @@ export const LoginStyles = styled.div`
   .password-input {
     border: none;
     width: 100%;
-    /* background-color: #e7cead; */
     background-color: #f1ebe2;
   }
 
@@ -93,6 +97,7 @@ export const LoginStyles = styled.div`
     align-items: center;
     gap: 1rem;
     margin-bottom: 1.25rem;
+    margin-top: 1.875rem;
   }
 
   .checkbox-container input {
@@ -118,6 +123,17 @@ export const LoginStyles = styled.div`
     font-family: inherit;
     font-weight: 600;
     font-size: 1.25rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .sign-in-btn:hover {
+    background-color: #bc8533;
+    transform: scale(1.05);
+  }
+
+  .sign-in-btn:active {
+    background-color: #bc8533;
+    transform: scale(1);
   }
 
   .google-sign-in {
@@ -142,11 +158,48 @@ export const LoginStyles = styled.div`
   .create-account {
     font-size: 1.125rem;
     align-self: center;
+    text-align: center;
   }
   .sign-up {
     font-family: "Proxima Nova", sans-serif;
     font-weight: 600;
     color: #d19439;
     font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .sign-up:hover {
+    color: #bc8533;
+  }
+
+  @media only screen and (max-width: 815px) {
+    .left-section {
+      display: none;
+    }
+    .right-section {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media only screen and (max-width: 488px) {
+    .sign-in-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .sign-in-btn {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    .welcome-text {
+      font-size: 1.8rem;
+      text-align: center;
+    }
   }
 `;
