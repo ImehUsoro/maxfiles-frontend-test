@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { login } from "../../services/api";
 import { LoginStyles } from "./LoginStyles";
 import BeatLoader from "react-spinners/BeatLoader";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [viewPassword, setViewPassword] = useState(false);
@@ -57,6 +58,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     setTimeout(() => {
+      toast.success("Login Successful");
       navigate("/");
     }, 3000);
   };

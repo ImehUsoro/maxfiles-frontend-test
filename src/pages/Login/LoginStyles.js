@@ -61,7 +61,6 @@ export const LoginStyles = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-bottom: 1.875rem; */
     margin-top: 1.25rem;
     background-color: #f1ebe2;
     border-radius: 0.625rem;

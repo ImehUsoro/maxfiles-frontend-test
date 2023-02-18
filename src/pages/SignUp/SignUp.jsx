@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { SignUpStyles } from "./SignUpStyles";
 import BeatLoader from "react-spinners/BeatLoader";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
   const [viewPassword, setViewPassword] = useState(false);
@@ -22,13 +23,13 @@ const SignUp = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-
   // Simulating Login without Backend
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     setTimeout(() => {
+      toast.success("Signup Successful");
       navigate("/login");
     }, 3000);
   };
@@ -41,10 +42,9 @@ const SignUp = () => {
         <p className="subtext">This will only take a minute!</p>
 
         <p className="signup-as-agent">
-          Sign up as an agent instead?{" "}
-          <br className="hide"/>
+          Sign up as an agent instead? <br className="hide" />
           <span onClick={() => setAgentSignUp((prev) => !prev)}>
-            {agentSignUp ? "Sign up as a user" : "Sign up as an agent"}
+            {agentSignUp ? "Sign up as myself" : "Sign up as an agent"}
           </span>
         </p>
 
@@ -175,8 +175,7 @@ const SignUp = () => {
           </div>
 
           <p className="create-account">
-            Already have an account?{" "}
-            <br className="break-hide"/>
+            Already have an account? <br className="break-hide" />
             <Link to={"/login"} className="sign-up">
               Sign In
             </Link>

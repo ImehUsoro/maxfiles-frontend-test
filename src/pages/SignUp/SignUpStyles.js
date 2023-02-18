@@ -312,6 +312,9 @@ export const SignUpStyles = styled.div`
       flex-direction: column;
       align-items: center;
     }
+    .sign-up-btn {
+      width: 100%;
+    }
     .welcome-text {
       font-size: 1.8rem;
     }
