@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "../../components/header/Header";
+import SectionFive from "../../components/section-five/SectionFive";
+import SectionFour from "../../components/section-four/SectionFour";
 import SectionOne from "../../components/section-one/SectionOne";
 import SectionThree from "../../components/section-three/SectionThree";
 import SectionTwo from "../../components/section-two/SectionTwo";
@@ -14,6 +16,8 @@ const Home = () => {
       <Statistics />
       <SectionTwo />
       <SectionThree />
+      <SectionFour />
+      <SectionFive />
     </HomeStyles>
   );
 };
