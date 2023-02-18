@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SectionOneStyles = styled.section`
+export const SectionTwoStyles = styled.section`
   display: flex;
   justify-content: flex-end;
   padding: 0 1rem 0 0;

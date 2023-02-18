@@ -1,9 +1,9 @@
 import React from "react";
-import { SectionOneStyles } from "./SectionTwoStyles";
+import { SectionTwoStyles } from "./SectionTwoStyles";
 
 const SectionTwo = () => {
   return (
-    <SectionOneStyles>
+    <SectionTwoStyles>
       <div className="left-section">
         <h2>
           Africa's <span>leading</span> visa consultants
@@ -19,7 +19,7 @@ const SectionTwo = () => {
       <div className="right-section">
         <img src="images/section_two_image.png" alt="" />
       </div>
-    </SectionOneStyles>
+    </SectionTwoStyles>
   );
 };
 
