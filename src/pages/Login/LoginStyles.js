@@ -39,7 +39,6 @@ export const LoginStyles = styled.div`
     color: #757575;
     font-size: 1.125rem;
     margin-bottom: 3.125rem;
-    text-align: center;
   }
 
   form {
@@ -90,6 +89,7 @@ export const LoginStyles = styled.div`
 
   .view-password-image-container {
     cursor: pointer;
+    user-select: none;
   }
 
   .checkbox-container {
@@ -97,7 +97,16 @@ export const LoginStyles = styled.div`
     align-items: center;
     gap: 1rem;
     margin-bottom: 1.25rem;
-    margin-top: 1.875rem;
+    margin-top: 2.5rem;
+  }
+
+  .checkbox-container input[type="checkbox"] {
+    border: none;
+    background-color: inherit;
+  }
+
+  .checkbox:checked {
+    background-color: #d19439;
   }
 
   .checkbox-container input {
@@ -115,8 +124,8 @@ export const LoginStyles = styled.div`
   }
 
   .sign-in-btn {
+    width: 9.0625rem;
     background-color: #d19439;
-    padding: 0 2.59375rem;
     line-height: 3.125rem;
     color: #f5f5f5;
     border-radius: 0.9375rem;
@@ -154,15 +163,16 @@ export const LoginStyles = styled.div`
     align-items: center;
     background-color: white;
     border-radius: 0.625rem;
+    cursor: pointer;
   }
   .create-account {
     font-size: 1.125rem;
     align-self: center;
     text-align: center;
+    font-weight: 600;
   }
   .sign-up {
     font-family: "Proxima Nova", sans-serif;
-    font-weight: 600;
     color: #d19439;
     font-size: 1rem;
     transition: all 0.2s ease-in-out;
@@ -170,6 +180,71 @@ export const LoginStyles = styled.div`
 
   .sign-up:hover {
     color: #bc8533;
+  }
+
+  .check-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .check-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: -0.15rem;
+    left: 0;
+    height: 1rem;
+    width: 1rem;
+    background-color: inherit;
+    border: 1px solid #222222;
+  }
+
+  .check-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  .check-container input:checked ~ .checkmark {
+    background-color: #d19439;
+    border: 1px solid #d19439;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .check-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .check-container .checkmark:after {
+    left: 5px;
+    top: 0px;
+    width: 3px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .break-hide {
+    display: none;
   }
 
   @media only screen and (max-width: 815px) {
@@ -194,12 +269,18 @@ export const LoginStyles = styled.div`
     .sign-in-btn {
       width: 100%;
     }
+    .subtext {
+      text-align: center;
+    }
   }
 
   @media only screen and (max-width: 350px) {
     .welcome-text {
       font-size: 1.8rem;
       text-align: center;
+    }
+    .break-hide {
+      display: block;
     }
   }
 `;
