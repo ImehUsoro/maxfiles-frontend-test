@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StatisticsStyles = styled.div`
   /* border: 1px solid red; */
   width: 51.6%;
-  margin: -2rem auto auto auto;
+  margin: -2rem auto 7.5625rem auto;
   border-radius: 1.25rem;
   padding: 0.875rem 3.1875rem;
   background-color: #d19439;
