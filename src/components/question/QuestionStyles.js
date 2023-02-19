@@ -5,9 +5,10 @@ export const QuestionStyle = styled.section`
   justify-content: space-between;
   padding: 1.25rem 6.5rem 0.625rem 1.3125rem;
   border-bottom: 1px solid #bdbdbd66;
+  cursor: pointer;
 
   .text-group {
-    /* transition: all 0.3s ease-in-out; */
+    user-select: none;
   }
   .text {
     font-weight: 600;

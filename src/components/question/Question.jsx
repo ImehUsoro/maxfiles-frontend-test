@@ -5,10 +5,9 @@ const Question = ({ text, answer }) => {
   const [showAnswer, setShowAnswer] = useState(false);
 
   return (
-    <QuestionStyle>
+    <QuestionStyle onClick={() => setShowAnswer((prev) => !prev)}>
       <div className="text-group">
         <p className="text">{text}</p>
-
         {showAnswer && <p className="answer">{answer}</p>}
       </div>
       {showAnswer ? (

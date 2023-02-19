@@ -9,10 +9,6 @@ export const LoginStyles = styled.div`
     text-decoration: none;
   }
 
-  input:-webkit-autofill {
-    transition: background-color 1s 5000s;
-  }
-
   input {
     outline: none;
   }

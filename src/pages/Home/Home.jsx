@@ -1,4 +1,5 @@
 import React from "react";
+import Assessment from "../../components/assessment/Assessment";
 import Faq from "../../components/faq/Faq";
 import Header from "../../components/header/Header";
 import SectionFive from "../../components/section-five/SectionFive";
@@ -22,6 +23,7 @@ const Home = () => {
       <SectionFive />
       <SectionSix />
       <Faq />
+      <Assessment />
     </HomeStyles>
   );
 };
