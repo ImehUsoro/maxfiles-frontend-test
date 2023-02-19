@@ -8,12 +8,11 @@ export const SectionSixStyles = styled.section`
     gap: 23.0625rem;
     margin-bottom: 0.625rem;
   }
-  
+
   .section-heading {
     font-weight: 800;
     font-size: 2.25rem;
     line-height: 3.125rem;
-    margin-bottom: 3.125rem;
     text-align: center;
 
     span {

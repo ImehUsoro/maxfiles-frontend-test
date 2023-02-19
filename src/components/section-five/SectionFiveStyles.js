@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SectionFiveStyles = styled.section`
-  margin-bottom: 15.4375rem;
+  margin-bottom: 9.375rem;
 
   .main-title {
     font-weight: 800;

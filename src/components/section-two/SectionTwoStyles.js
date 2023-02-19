@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SectionTwoStyles = styled.section`
   display: flex;
   justify-content: flex-end;
-  padding: 0 1rem 0 0;
+  padding: 0;
   gap: 10.2%;
   margin-bottom: 9.375rem;
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Faq from "../../components/faq/Faq";
 import Header from "../../components/header/Header";
 import SectionFive from "../../components/section-five/SectionFive";
 import SectionFour from "../../components/section-four/SectionFour";
@@ -20,6 +21,7 @@ const Home = () => {
       <SectionFour />
       <SectionFive />
       <SectionSix />
+      <Faq />
     </HomeStyles>
   );
 };
