@@ -30,7 +30,7 @@ const Header = () => {
           <Link to={"/"}>Agent information</Link>
           <Link to={"/"}>Country requirements</Link>
           <Link to={"/"}>About Us</Link>
-          <Link to={"/"}>Contact Us</Link>
+          <a href="#contact-us">Contact Us</a>
         </div>
       </div>
       <div className="right-section">

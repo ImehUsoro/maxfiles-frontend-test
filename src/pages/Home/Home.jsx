@@ -1,6 +1,7 @@
 import React from "react";
 import Assessment from "../../components/assessment/Assessment";
 import Faq from "../../components/faq/Faq";
+import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import SectionFive from "../../components/section-five/SectionFive";
 import SectionFour from "../../components/section-four/SectionFour";
@@ -14,16 +15,17 @@ import { HomeStyles } from "./HomeStyles";
 const Home = () => {
   return (
     <HomeStyles>
-      <Header />
-      <SectionOne />
-      <Statistics />
-      <SectionTwo />
-      <SectionThree />
-      <SectionFour />
-      <SectionFive />
-      <SectionSix />
-      <Faq />
-      <Assessment />
+      {/* <Header /> */}
+      {/* <SectionOne /> */}
+      {/* <Statistics /> */}
+      {/* <SectionTwo /> */}
+      {/* <SectionThree /> */}
+      {/* <SectionFour /> */}
+      {/* <SectionFive /> */}
+      {/* <SectionSix /> */}
+      {/* <Faq /> */}
+      {/* <Assessment /> */}
+      <Footer />
     </HomeStyles>
   );
 };

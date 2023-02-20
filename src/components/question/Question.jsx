@@ -15,14 +15,14 @@ const Question = ({ text, answer }) => {
           src="/images/collapse_icon.png"
           alt=""
           className="icon"
-          onClick={() => setShowAnswer(false)}
+          // onClick={() => setShowAnswer(false)}
         />
       ) : (
         <img
           src="/images/add_icon.png"
           alt=""
           className="icon"
-          onClick={() => setShowAnswer(true)}
+          // onClick={() => setShowAnswer(true)}
         />
       )}
     </QuestionStyle>

@@ -43,6 +43,27 @@ export const AssessmentStyle = styled.section`
     textarea:focus {
       outline: 2px solid #d19439;
     }
+
+    .submit-btn {
+      background-color: #d19439;
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: #f5f5f5;
+      padding: 1rem 3.125rem;
+      border-radius: 1rem;
+      margin-top: 1.875rem;
+      margin-bottom: 2.8125rem;
+      align-self: center;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .submit-btn:hover {
+      background-color: #bc8533;
+      transform: scale(1.05);
+    }
+    .submit-btn:active {
+      transform: scale(1);
+    }
   }
 
   .assessment-heading {
@@ -58,17 +79,5 @@ export const AssessmentStyle = styled.section`
     margin-bottom: 3.125rem;
     color: #d19439;
     font-size: 1.125rem;
-  }
-
-  .submit-btn {
-    background-color: #d19439;
-    font-weight: 600;
-    font-size: 1.25rem;
-    color: #f5f5f5;
-    padding: 1rem 3.125rem;
-    border-radius: 1rem;
-    margin-top: 1.875rem;
-    margin-bottom: 2.8125rem;
-    align-self: center;
   }
 `;

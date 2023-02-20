@@ -10,13 +10,18 @@ const Assessment = () => {
       [e.target.name]: e.target.value,
     });
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <AssessmentStyle>
+    <AssessmentStyle id="contact-us">
       <h2 className="assessment-heading">Get free assessment today</h2>
       <p className="assessment-text">
         Feel free to enquire about any questions you have
       </p>
-      <form action="" className="form">
+      <form action="" className="form" onSubmit={handleSubmit}>
         <input
           type="text"
           className="input"

@@ -4,7 +4,7 @@ import { FaqStyles } from "./FaqStyles";
 
 const Faq = () => {
   return (
-    <FaqStyles>
+    <FaqStyles id="faq">
       <h2 className="faq-heading">Frequently asked questions</h2>
 
       <div className="faqs-container">
