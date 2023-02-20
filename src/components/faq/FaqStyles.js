@@ -29,11 +29,13 @@ export const FaqStyles = styled.section`
 
   @media (max-width: 900px) {
     margin-top: 0;
+    margin-bottom: 5rem;
   }
 
   @media (max-width: 860px) {
     .faqs-container {
       width: 90%;
+      padding: 1.875rem 1rem 4.5rem 1rem;
     }
   }
 

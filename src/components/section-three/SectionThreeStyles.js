@@ -20,9 +20,11 @@ export const SectionThreeStyles = styled.section`
     width: 100%;
   }
 
-  @media (max-width: 450px) {
-    margin-bottom: 6rem;
+  @media (max-width: 860px) {
+    margin-bottom: 6.5rem;
+  }
 
+  @media (max-width: 450px) {
     h2 {
       font-size: 1.8rem;
       margin-bottom: 3rem;

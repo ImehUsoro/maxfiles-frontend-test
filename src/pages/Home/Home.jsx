@@ -16,8 +16,8 @@ const Home = () => {
   return (
     <HomeStyles>
       {/* <Header /> */}
-      {/* <SectionOne /> */}
-      {/* <Statistics /> */}
+      <SectionOne />
+      <Statistics />
       <SectionTwo />
       <SectionThree />
       <SectionFour />

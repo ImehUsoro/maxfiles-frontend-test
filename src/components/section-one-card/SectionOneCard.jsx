@@ -1,7 +1,7 @@
 import React from "react";
 import { SectionOneStyles } from "./SectionOneCardStyles";
 
-const SectionOneCard = ({ type, title, info, subInfo, widthChange }) => {
+const SectionOneCard = ({ title, info, subInfo, widthChange }) => {
   return (
     <SectionOneStyles
       group={`${subInfo ? true : false}`}

@@ -14,4 +14,10 @@ export const SingleStatStyles = styled.section`
   p {
     color: #f5f5f5;
   }
+
+  @media (max-width: 1155px) {
+    p {
+      text-align: center;
+    }
+  }
 `;

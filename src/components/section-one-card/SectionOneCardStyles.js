@@ -4,14 +4,12 @@ export const SectionOneStyles = styled.div`
   background-color: #f5f5f5;
   border-radius: 1rem;
   padding: 1rem 0 1.5625rem 1.25rem;
-  padding-top: 1rem;
   width: 13.125rem;
   height: 6.625rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
   :hover {
-    /* box-shadow: 0px 4px 24px rgba(212, 175, 156, 0.25); */
     box-shadow: 0px 0px 7px 2px rgba(204, 204, 204, 0.5);
     -webkit-box-shadow: 0px 0px 7px 2px rgba(204, 204, 204, 0.5);
     -moz-box-shadow: 0px 0px 7px 2px rgba(204, 204, 204, 0.5);
@@ -60,4 +58,24 @@ export const SectionOneStyles = styled.div`
         gap: 0;
       }
     `};
+
+  @media (max-width: 900px) {
+    width: 10rem;
+    padding: 1rem 0.75rem 0 1.25rem;
+    height: auto;
+
+    .card-info {
+      gap: 0;
+      justify-content: space-between;
+    }
+  }
+
+
+  @media (max-width: 520px) {
+    ${({ widthChange }) =>
+      !widthChange &&
+      css`
+        height: 5.75rem;
+      `};
+  }
 `;
