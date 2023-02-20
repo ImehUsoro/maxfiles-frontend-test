@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const QuestionStyle = styled.section`
   display: flex;
   justify-content: space-between;
-  padding: 1.25rem 6.5rem 0.625rem 1.3125rem;
+  padding: 1.25rem 10.8% 0.625rem 1.3125rem;
+  /* padding: 1.25rem 6.5rem 0.625rem 1.3125rem; */
   border-bottom: 1px solid #bdbdbd66;
   cursor: pointer;
 
@@ -26,5 +27,13 @@ export const QuestionStyle = styled.section`
     align-self: center;
     cursor: pointer;
     user-select: none;
+  }
+
+  @media (max-width: 1070px) {
+    padding: 1.25rem 2% 0.625rem 1.3125rem;
+  }
+
+  @media (max-width: 860px) {
+    gap: 2rem;
   }
 `;

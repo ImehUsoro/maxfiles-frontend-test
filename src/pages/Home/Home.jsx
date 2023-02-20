@@ -23,9 +23,9 @@ const Home = () => {
       {/* <SectionFour /> */}
       {/* <SectionFive /> */}
       {/* <SectionSix /> */}
-      {/* <Faq /> */}
-      <Assessment />
-      <Footer />
+      <Faq />
+      {/* <Assessment /> */}
+      {/* <Footer /> */}
     </HomeStyles>
   );
 };

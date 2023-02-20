@@ -17,7 +17,7 @@ export const FaqStyles = styled.section`
   }
 
   .faqs-container {
-    width: 60rem;
+    width: 66.5%;
     background: linear-gradient(
       180deg,
       #f5f5f5 0%,
@@ -25,5 +25,11 @@ export const FaqStyles = styled.section`
     );
     border-radius: 1.25rem;
     padding: 1.875rem 1.875rem 4.5rem 1.875rem;
+  }
+
+  @media (max-width: 860px) {
+    .faqs-container {
+      width: 90%;
+    }
   }
 `;
