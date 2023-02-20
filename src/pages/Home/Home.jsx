@@ -20,8 +20,8 @@ const Home = () => {
       {/* <Statistics /> */}
       {/* <SectionTwo /> */}
       {/* <SectionThree /> */}
-      {/* <SectionFour /> */}
-      <SectionFive />
+      <SectionFour />
+      {/* <SectionFive /> */}
       {/* <SectionSix /> */}
       {/* <Faq /> */}
       {/* <Assessment /> */}

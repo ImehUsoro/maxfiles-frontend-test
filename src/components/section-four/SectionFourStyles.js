@@ -15,9 +15,18 @@ export const SectionFourStyles = styled.section`
   }
 
   .top-destination-cards-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-items: center;
     gap: 1.6875rem;
-    justify-content: center;
+    row-gap: 4rem;
     width: 100%;
+  }
+
+  @media (max-width: 320px) {
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 3.375rem;
+    }
   }
 `;

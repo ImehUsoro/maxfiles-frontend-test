@@ -4,7 +4,6 @@ export const TopDestinationCardStyles = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
   box-shadow: 0px 4px 8px rgba(14, 31, 53, 0.12);
   border-radius: 1.25rem;
   width: 18.125rem;
@@ -30,12 +29,17 @@ export const TopDestinationCardStyles = styled.div`
       font-size: 1.25rem;
     }
   }
-`;
 
-//  .image-container {
-//     width: 50%;
-//   }
-//   .image {
-//     max-width: 100%;
-//     height: auto;
-//   }
+  @media (max-width: 320px) {
+    width: 13.5rem;
+    height: 14rem;
+
+    .top {
+      width: 100%;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+`;
