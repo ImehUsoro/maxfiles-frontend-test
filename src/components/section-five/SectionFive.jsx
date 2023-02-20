@@ -11,7 +11,7 @@ const SectionFive = () => {
       </div>
 
       <div className="popular-destination-container">
-        <img src={"/images/previous_icon.png"} alt="" />
+        <img src={"/images/previous_icon.png"} alt="" className="hide" />
         <div className="popular-destinations-cards-container">
           <PopularDestinationCard
             name="United Arab Emirates"
@@ -34,7 +34,7 @@ const SectionFive = () => {
             price="25,000"
           />
         </div>
-        <img src={"/images/next_icon.png"} alt="" />
+        <img src={"/images/next_icon.png"} alt="" className="hide" />
       </div>
     </SectionFiveStyles>
   );

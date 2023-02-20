@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const SectionFiveStyles = styled.section`
   margin-bottom: 9.375rem;
+  width: 100%;
 
   .main-title {
     font-weight: 800;
@@ -36,7 +37,36 @@ export const SectionFiveStyles = styled.section`
   }
 
   .popular-destinations-cards-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5625rem;
+    row-gap: 4rem;
+    width: 90%;
+    place-items: center;
+  }
+
+  @media (max-width: 1420px) {
+    .popular-destination-container {
+      margin: 0 2rem;
+    }
+  }
+
+  @media (max-width: 812px) {
+    .hide {
+      display: none;
+    }
+    .popular-destination-container {
+      margin: 0;
+    }
+
+    .popular-destinations-cards-container {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 364px) {
+    .main-title {
+      font-size: 1.8rem;
+    }
   }
 `;

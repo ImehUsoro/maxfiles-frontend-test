@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const TestimonialCardStyles = styled.div`
   padding: 0 3.1% 1.6rem 3.1%;

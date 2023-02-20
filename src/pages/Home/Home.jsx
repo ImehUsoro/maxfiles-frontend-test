@@ -21,8 +21,8 @@ const Home = () => {
       {/* <SectionTwo /> */}
       {/* <SectionThree /> */}
       {/* <SectionFour /> */}
-      {/* <SectionFive /> */}
-      <SectionSix />
+      <SectionFive />
+      {/* <SectionSix /> */}
       {/* <Faq /> */}
       {/* <Assessment /> */}
       {/* <Footer /> */}

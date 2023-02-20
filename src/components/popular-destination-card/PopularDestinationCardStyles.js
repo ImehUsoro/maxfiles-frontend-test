@@ -44,4 +44,21 @@ export const PopularDestinationCardStyles = styled.div`
       line-height: 3.125rem;
     }
   }
+
+  @media (max-width: 320px) {
+    width: 13.5rem;
+    .image-container {
+      width: 100%;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .info-container {
+      padding-top: 1.8rem;
+
+      padding-bottom: 1.8rem;
+    }
+  }
 `;
