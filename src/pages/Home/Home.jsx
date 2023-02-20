@@ -18,7 +18,7 @@ const Home = () => {
       {/* <Header /> */}
       {/* <SectionOne /> */}
       {/* <Statistics /> */}
-      {/* <SectionTwo /> */}
+      <SectionTwo />
       <SectionThree />
       <SectionFour />
       <SectionFive />
