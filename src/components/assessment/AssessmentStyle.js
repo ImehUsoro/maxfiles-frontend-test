@@ -17,7 +17,7 @@ export const AssessmentStyle = styled.section`
       margin-bottom: 1.25rem;
       font-size: 1.125rem;
       outline: none;
-      padding: 1.125rem 0 1.125rem 3.75rem;
+      padding: 1.125rem 0 1.125rem 6.9%;
       border: none;
       border-radius: 0.625rem;
     }
@@ -33,7 +33,7 @@ export const AssessmentStyle = styled.section`
     textarea {
       border: none;
       border-radius: 0.625rem;
-      padding: 1.625rem 0 1.625rem 3.75rem;
+      padding: 1.625rem 0 1.625rem 6.9%;
       font-family: "Lato", sans-serif;
       font-size: 1.125rem;
       outline: none;
@@ -79,5 +79,15 @@ export const AssessmentStyle = styled.section`
     margin-bottom: 3.125rem;
     color: #d19439;
     font-size: 1.125rem;
+  }
+
+  @media (max-width: 730px) {
+    .form {
+      width: 85%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    margin: 0 3%;
   }
 `;
