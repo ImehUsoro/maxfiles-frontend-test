@@ -69,7 +69,7 @@ export const SectionSixStyles = styled.section`
   }
 
   @media (max-width: 550px) {
-    margin: 0 2rem;
+    margin: 0 2rem 5rem 2rem;
 
     .section-heading {
       font-size: 1.8rem;

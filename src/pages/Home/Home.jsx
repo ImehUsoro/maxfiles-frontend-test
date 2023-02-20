@@ -15,7 +15,7 @@ import { HomeStyles } from "./HomeStyles";
 const Home = () => {
   return (
     <HomeStyles>
-      {/* <Header /> */}
+      <Header />
       <SectionOne />
       <Statistics />
       <SectionTwo />

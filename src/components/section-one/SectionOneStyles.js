@@ -80,6 +80,7 @@ export const SectionOneStyles = styled.section`
   }
 
   @media (max-width: 520px) {
+    margin-top: 0;
     .title {
       margin-top: 4.5rem;
       font-size: 1.8rem;

@@ -4,7 +4,7 @@ export const HeaderStyles = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 6.25rem 0 3.625rem;
+  padding: 0 6.9444444444% 0 4.1666666667%;
 
   .left-section {
     display: flex;
@@ -27,14 +27,17 @@ export const HeaderStyles = styled.div`
   .links a {
   }
 
+  .btn {
+    padding: 0.8rem 1.875rem;
+    transition: all 0.2s ease-in-out;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
   .sign-in-btn {
     border: 1px solid #d19439;
     padding: 0.8rem 1.875rem;
-    /* line-height: 50px; */
-    border-radius: 1rem;
-    transition: all 0.2s ease-in-out;
-    font-size: 1.25rem;
-    font-weight: 600;
   }
 
   .sign-up-container {
@@ -45,12 +48,8 @@ export const HeaderStyles = styled.div`
     background-color: #d19439;
     color: #f5f5f5;
     padding: 0.8rem 1.875rem;
-    border-radius: 1rem;
-    transition: all 0.2s ease-in-out;
     cursor: pointer;
     user-select: none;
-    font-size: 1.25rem;
-    font-weight: 600;
   }
 
   .sign-in-btn:hover {
@@ -86,10 +85,46 @@ export const HeaderStyles = styled.div`
     background-color: #4c4c4c;
     color: #f5f5f5;
     font-weight: 800;
-    /* font-size: 1.125rem; */
   }
   .divider {
     border: 1px solid #bdbdbd;
     width: 90%;
+  }
+
+  @media (max-width: 1280px) {
+    .left-section {
+      gap: 2rem;
+    }
+    .links {
+      gap: 1.5rem;
+    }
+    .btn {
+      padding: 0.5rem 1.2rem;
+      border-radius: 0.5rem;
+    }
+  }
+
+  @media (max-width: 1120px) {
+    .links {
+      display: none;
+    }
+  }
+
+  @media (max-width: 520px) {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  @media (max-width: 270px) {
+    .btn {
+      padding: 0.3rem 0;
+      width: 100px;
+      display: flex;
+      justify-content: center;
+    }
+    .sign-up-btn {
+      width: 100px;
+    }
   }
 `;

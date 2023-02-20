@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FaqStyles = styled.section`
-  margin-top: -3.2rem;
+  margin-top: -14.2rem;
   margin-bottom: 9.375rem;
   display: flex;
   justify-content: center;

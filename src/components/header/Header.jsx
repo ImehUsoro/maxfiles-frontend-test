@@ -34,12 +34,12 @@ const Header = () => {
         </div>
       </div>
       <div className="right-section">
-        <Link to={"/login"} className="sign-in-btn">
+        <Link to={"/login"} className="sign-in-btn btn">
           Sign In
         </Link>
         <div className="sign-up-container">
           <span
-            className="sign-up-btn"
+            className="sign-up-btn btn"
             onClick={() => setShowSignupOptions((prev) => !prev)}
           >
             Sign Up
