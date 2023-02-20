@@ -1,8 +1,7 @@
 import styled, { css } from "styled-components";
 
-export const TestimonialCardStyles = styled.section`
-  height: 16.5rem;
-  width: 25rem;
+export const TestimonialCardStyles = styled.div`
+  padding: 0 3.1% 1.6rem 3.1%;
   background-color: #ffffff;
   border-radius: 1.25rem;
   display: flex;
@@ -56,13 +55,19 @@ export const TestimonialCardStyles = styled.section`
 
   .stars-container {
     display: flex;
+    height: 100%;
+    img {
+      align-self: flex-end;
+    }
   }
 
-  ${({ space }) =>
-    space &&
-    css`
-      .stars-container {
-        margin-top: 1.4375rem;
-      }
-    `};
+  @media (max-width: 1220px) {
+    width: 27rem;
+    height: 15.625rem;
+  }
+
+  @media (max-width: 550px) {
+    width: auto;
+    height: auto;
+  }
 `;

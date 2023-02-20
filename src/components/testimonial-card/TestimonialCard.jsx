@@ -3,7 +3,7 @@ import { TestimonialCardStyles } from "./TestimonialCardStyles";
 
 const TestimonialCard = ({ name, image, text, space }) => {
   return (
-    <TestimonialCardStyles space={space ? true : false}>
+    <TestimonialCardStyles>
       <img src={image} alt="" className="profile-image" />
       <p className="name">{name}</p>
       <div className="quote-container">
