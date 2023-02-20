@@ -4,7 +4,6 @@ export const QuestionStyle = styled.section`
   display: flex;
   justify-content: space-between;
   padding: 1.25rem 10.8% 0.625rem 1.3125rem;
-  /* padding: 1.25rem 6.5rem 0.625rem 1.3125rem; */
   border-bottom: 1px solid #bdbdbd66;
   cursor: pointer;
 
@@ -35,5 +34,11 @@ export const QuestionStyle = styled.section`
 
   @media (max-width: 860px) {
     gap: 2rem;
+  }
+
+  @media (max-width: 620px) {
+    .text {
+      line-height: 2rem;
+    }
   }
 `;

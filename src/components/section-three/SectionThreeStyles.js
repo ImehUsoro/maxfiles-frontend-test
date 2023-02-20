@@ -11,9 +11,21 @@ export const SectionThreeStyles = styled.section`
   }
 
   .cards-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    place-items: center;
     gap: 2.5rem;
+    row-gap: 4rem;
     justify-content: center;
     width: 100%;
+  }
+
+  @media (max-width: 450px) {
+    margin-bottom: 6rem;
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+    }
   }
 `;

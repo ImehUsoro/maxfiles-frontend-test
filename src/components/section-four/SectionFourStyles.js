@@ -29,4 +29,6 @@ export const SectionFourStyles = styled.section`
       margin-bottom: 3.375rem;
     }
   }
+
+  
 `;

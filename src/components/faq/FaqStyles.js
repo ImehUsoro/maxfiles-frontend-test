@@ -27,9 +27,19 @@ export const FaqStyles = styled.section`
     padding: 1.875rem 1.875rem 4.5rem 1.875rem;
   }
 
+  @media (max-width: 900px) {
+    margin-top: 0;
+  }
+
   @media (max-width: 860px) {
     .faqs-container {
       width: 90%;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .faqs-container {
+      padding: 0;
     }
   }
 `;

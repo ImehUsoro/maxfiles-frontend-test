@@ -19,13 +19,13 @@ const Home = () => {
       {/* <SectionOne /> */}
       {/* <Statistics /> */}
       {/* <SectionTwo /> */}
-      {/* <SectionThree /> */}
+      <SectionThree />
       <SectionFour />
-      {/* <SectionFive /> */}
-      {/* <SectionSix /> */}
-      {/* <Faq /> */}
-      {/* <Assessment /> */}
-      {/* <Footer /> */}
+      <SectionFive />
+      <SectionSix />
+      <Faq />
+      <Assessment />
+      <Footer />
     </HomeStyles>
   );
 };

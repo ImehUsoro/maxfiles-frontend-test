@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SectionSixStyles = styled.section`
+  margin-bottom: 11.875rem;
   .image-and-text {
     display: flex;
     align-items: center;
