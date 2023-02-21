@@ -273,7 +273,7 @@ export const SignUpStyles = styled.div`
 
     .right-section {
       width: 100%;
-      height: 100vh;
+      height: 100%;
       padding: 3rem 0;
       display: flex;
       flex-direction: column;
