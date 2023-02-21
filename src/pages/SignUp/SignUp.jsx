@@ -3,13 +3,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { SignUpStyles } from "./SignUpStyles";
 import BeatLoader from "react-spinners/BeatLoader";
 import { toast } from "react-toastify";
+import { signUp } from "../../services/api";
+import { useRecoilState } from "recoil";
+import { agentSignUpState } from "../../components/atoms/SignUpAtom";
 
 const SignUp = () => {
   const [viewPassword, setViewPassword] = useState(false);
   const [viewConfirmPassword, setViewConfirmPassword] = useState(false);
-  const [agentSignUp, setAgentSignUp] = useState(false);
+  const [agentSignUp, setAgentSignUp] = useRecoilState(agentSignUpState);
   const [checked, setChecked] = useState(false);
-  const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
@@ -28,6 +30,10 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+
+    // With Backend API
+    // signUp(formData, setLoading, navigate);
+
     setTimeout(() => {
       toast.success("Signup Successful");
       navigate("/login");
@@ -42,7 +48,8 @@ const SignUp = () => {
         <p className="subtext">This will only take a minute!</p>
 
         <p className="signup-as-agent">
-          Sign up as an agent instead? <br className="hide" />
+          Sign up as an {agentSignUp ? "myself" : "agent"} instead?{" "}
+          <br className="hide" />
           <span onClick={() => setAgentSignUp((prev) => !prev)}>
             {agentSignUp ? "Sign up as myself" : "Sign up as an agent"}
           </span>
@@ -58,11 +65,13 @@ const SignUp = () => {
                 value={formData.firstName || ""}
                 placeholder="First name *"
                 className="input plain-input"
+                required
               />
               <div className="input-and-icon-group">
                 <input
                   type="text"
                   name="email"
+                  required
                   onChange={handleChange}
                   value={formData.email || ""}
                   placeholder="Email address *"
@@ -76,6 +85,7 @@ const SignUp = () => {
               <div className="input-and-icon-group">
                 <input
                   name="password"
+                  required
                   onChange={handleChange}
                   value={formData.password || ""}
                   type={`${viewPassword ? "text" : "password"}`}
@@ -97,6 +107,7 @@ const SignUp = () => {
 
             <div className="inputs">
               <input
+                required
                 type="text"
                 name="lastName"
                 onChange={handleChange}
@@ -111,6 +122,7 @@ const SignUp = () => {
                   <img src="/images/drop_down.png" alt="" />
                 </div>
                 <input
+                  required
                   name="phoneNumber"
                   onChange={handleChange}
                   value={formData.phoneNumber || ""}
@@ -122,6 +134,7 @@ const SignUp = () => {
 
               <div className="input-and-icon-group">
                 <input
+                  required
                   name="confirmPassword"
                   onChange={handleChange}
                   value={formData.confirmPassword || ""}

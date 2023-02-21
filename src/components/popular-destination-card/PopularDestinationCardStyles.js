@@ -9,6 +9,14 @@ export const PopularDestinationCardStyles = styled.div`
   border-radius: 1.25rem;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease-in-out;
+
+  :hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+  }
 
   .name-container p {
     font-weight: 600;

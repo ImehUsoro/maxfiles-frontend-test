@@ -74,18 +74,27 @@ export const HeaderStyles = styled.div`
     border-radius: 0.625rem;
     box-shadow: 0px 4px 24px rgba(212, 175, 156, 0.25);
   }
-  .sign-up-modal a {
+  .sign-up-modal button {
     width: 90%;
     text-align: center;
     padding: 0.6rem;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
     font-weight: 600;
   }
-  .sign-up-modal a:hover {
+  .sign-up-modal button:hover {
     background-color: #4c4c4c;
     color: #f5f5f5;
     font-weight: 800;
   }
+
+  .sign-up-modal .top:hover {
+    border-radius: 4px 4px 0 0;
+  }
+
+  .sign-up-modal .bottom:hover {
+    border-radius: 0 0 4px 4px;
+  }
+
   .divider {
     border: 1px solid #bdbdbd;
     width: 90%;

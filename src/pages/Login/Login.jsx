@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../../services/api";
 import { LoginStyles } from "./LoginStyles";
@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 const Login = () => {
   const [viewPassword, setViewPassword] = useState(false);
   const [formData, setFormData] = useState({});
-  const [errors, setErrors] = useState({});
+  // const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [checked, setChecked] = useState(false);
   const navigate = useNavigate();
@@ -18,45 +18,14 @@ const Login = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  useEffect(() => {
-    if (formData.password) {
-      const errors = {};
-      if (formData.password.length < 6) {
-        errors.password = "Password must be at least 6 characters";
-      }
-      if (formData.email) {
-        const errors = {};
-        if (!formData.email.includes("@")) {
-          errors.email = "Email is invalid";
-        }
-        setErrors((prev) => ({ ...prev, ...errors }));
-      }
-    }
-  }, [formData.password, errors.password, errors.email, formData.email]);
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-
-  //   const errors = {};
-  //   if (!formData.email) {
-  //     errors.email = "Email is required";
-  //   }
-  //   if (!formData.password) {
-  //     errors.password = "Password is required";
-  //   }
-  //   if (Object.keys(errors).length > 0) {
-  //     setErrors(errors);
-  //     setLoading(false);
-  //     return;
-  //   }
-  //   login(formData, setLoading);
-  // };
-
-  //Simulating Login without  Backend
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+
+    // With Backend API
+    // login(formData, setLoading, navigate);
+
+    // Without Backend API
     setTimeout(() => {
       toast.success("Login Successful");
       navigate("/");
@@ -77,8 +46,9 @@ const Login = () => {
             value={formData.email || ""}
             placeholder="Email Address *"
             className="input email-input"
+            // required
           />
-          {errors.email && <p className="error">{errors.email}</p>}
+          {/* {errors.email && <p className="error">{errors.email}</p>} */}
           <div className="password-input-container">
             <input
               onChange={handleChange}
@@ -87,6 +57,7 @@ const Login = () => {
               className="input password-input"
               type={`${viewPassword ? "text" : "password"}`}
               placeholder="Password *"
+              required
             />
 
             <div
@@ -100,7 +71,7 @@ const Login = () => {
               )}
             </div>
           </div>
-          {errors.password && <p className="error">{errors.password}</p>}
+          {/* {errors.password && <p className="error">{errors.password}</p>} */}
           <div className="checkbox-container">
             <div
               className="check-container"

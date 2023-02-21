@@ -1,10 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { agentSignUpState } from "../atoms/SignUpAtom";
 import { HeaderStyles } from "./HeaderStyles";
 
 const Header = () => {
   const [showSignupOptions, setShowSignupOptions] = useState(false);
+  const [agentSignUp, setAgentSignUp] = useRecoilState(agentSignUpState);
   const ref = useRef();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
@@ -47,9 +51,27 @@ const Header = () => {
 
           {showSignupOptions && (
             <div className="sign-up-modal" ref={ref}>
-              <Link to={"/signup"}>Sign up as myself</Link>
+              <button
+                className="top"
+                onClick={() => {
+                  setAgentSignUp(false);
+                  setShowSignupOptions(false);
+                  navigate("/signup");
+                }}
+              >
+                Sign up as myself
+              </button>
               <div className="divider"></div>
-              <Link to={"/signup"}>Sign up as an agent</Link>
+              <button
+                className="bottom"
+                onClick={() => {
+                  setAgentSignUp(true);
+                  setShowSignupOptions(false);
+                  navigate("/signup");
+                }}
+              >
+                Sign up as an agent
+              </button>
             </div>
           )}
         </div>

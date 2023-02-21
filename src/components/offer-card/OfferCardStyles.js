@@ -10,6 +10,14 @@ export const OfferCardStyles = styled.div`
   border-radius: 1.25rem;
   width: 13.15rem;
   height: 15.12375rem;
+  transition: all 0.3s ease-in-out;
+
+  :hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+  }
 
   .card-image {
     margin-top: -1.5rem;

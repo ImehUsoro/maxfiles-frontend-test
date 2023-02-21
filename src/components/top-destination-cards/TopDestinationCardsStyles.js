@@ -9,6 +9,14 @@ export const TopDestinationCardStyles = styled.div`
   width: 18.125rem;
   height: 17.375rem;
   color: #f5f5f5;
+  transition: all 0.3s ease-in-out;
+
+  :hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+  }
 
   ${({ bg }) =>
     bg === "#D19439" &&
